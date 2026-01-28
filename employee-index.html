@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-icon">👔</div>
+                <h1 class="header-title">Employee Hub</h1>
+                <p class="header-subtitle">Smart Workforce Management Platform</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Registration Card -->
+            <div class="glass-card registration-card" id="registrationCardEl">
+                <div class="card-header">
+                    <h2 class="card-title">Employee Registration</h2>
+                    <p class="card-description">Join our professional team</p>
+                </div>
+
+                <form id="registrationForm" class="form">
+                    <!-- Employee ID -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="employeeId" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="employeeId" class="floating-label">Employee ID</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="employeeIdError"></span>
+                    </div>
+
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="firstName" class="floating-label">First Name</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="lastName" class="floating-label">Last Name</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="email" class="floating-label">Email Address</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="tel" 
+                                id="phoneNumber" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="phoneNumber" class="floating-label">Phone Number</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="phoneNumberError"></span>
+                        <span class="input-hint">10 digits starting with 6-9 (Indian format)</span>
+                    </div>
+
+                    <!-- Department -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <select id="department" class="form-input form-select" required>
+                                <option value="">Select Department</option>
+                                <option value="HR">Human Resources (HR)</option>
+                                <option value="IT">Information Technology (IT)</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                            <label for="department" class="floating-label">Department</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="departmentError"></span>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="password" class="floating-label">Password</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="passwordError"></span>
+                        <div class="password-requirements">
+                            <p class="requirements-title">Password Requirements:</p>
+                            <ul class="requirements-list">
+                                <li id="req-length"><span class="check-mark">○</span> Minimum 8 characters</li>
+                                <li id="req-uppercase"><span class="check-mark">○</span> 1 uppercase (A-Z)</li>
+                                <li id="req-lowercase"><span class="check-mark">○</span> 1 lowercase (a-z)</li>
+                                <li id="req-number"><span class="check-mark">○</span> 1 number (0-9)</li>
+                                <li id="req-special"><span class="check-mark">○</span> 1 special (!@#$%^&*)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                class="form-input"
+                                placeholder=" "
+                                required
+                            >
+                            <label for="confirmPassword" class="floating-label">Confirm Password</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Register Employee</span>
+                        <span class="btn-ripple"></span>
+                    </button>
+                </form>
+
+                <!-- Info Box -->
+                <div class="info-box">
+                    <span class="info-icon">ℹ️</span>
+                    <p>All fields are mandatory. Ensure accuracy before submitting.</p>
+                </div>
+            </div>
+
+            <!-- Success Card -->
+            <div class="glass-card success-card" id="successCard" style="display: none;">
+                <div class="success-content">
+                    <div class="success-icon">✓</div>
+                    <h2 class="success-title">Registration Successful!</h2>
+                    <p class="success-message" id="successMessage"></p>
+                    <div class="success-details" id="successDetails"></div>
+                    <button class="submit-btn" onclick="location.reload()">
+                        <span class="btn-text">Register Another Employee</span>
+                        <span class="btn-ripple"></span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Employee Hub | Crafted with care for modern HR</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
